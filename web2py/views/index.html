@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+<title>Welcome to PyFaces</title>
+<div class="highlight">
+    <h1>Welcome to PyFaces!</h1>
+    <span>Upload a photo of Simona, Alex or Vlad and get them recognized!</span>
+    <div id="highlight-buttons">
+        <label for="filedata" class="button upload main">Upload file</label>
+        <input type="file" id="filedata" accept="image/*">
+        <a href="#" class="button submit main"><span class="icon">&#x2714;</span>Submit</a>
+    </div>
+</div>
+
+<h1>Getting started with PyFaces</h1>
+<p>
+To get started with PyFaces upload a photo of Simona, Vlad or Alex using the "Upload" button above. The photo will then be processed and compared with the model. After that, the app will show you the identified person.<br>
+<br>
+Currently PyFaces' supported formats are: JPEG, PNG, and GIF.
+</p>
+
+<h1>About PyFaces</h1>
+<p>
+PyFaces was developed for the artifical intelligence exam of the 2020 summer semester at the Babeș-Bolyai University of Cluj-Napoca here in Romania. The classifier is built using Keras, MTCNN and FaceNet and runs on the server-side through Web2py provided by PythonEverywhere.com. We supplied a couple of photos for the training and stored it in a Hierachical Data Format (h5) using Keras. Both the front-end and the backend of this website are available on the GitHub page linked in the header.
+</p>
+
+<h1>Third-party licences</h1>
+<p>
+Unless otherwise stated, all components of this website are licensed through the GNU General Public License.
+</p>
+<script src="../static/default/upload.js"></script>

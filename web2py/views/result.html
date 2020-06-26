@@ -1,0 +1,37 @@
+{{extend 'layout.html'}}
+<title>Your result is ready!</title>
+<div class="highlight">
+    <h1>Your result is ready!</h1>
+    <span><b>{{=prediction}}</b> was identified in this photo.</span>
+    <div id="highlight-buttons">
+        <a class="button" href="#" id="advanced-options"><span class="icon">&#x2BC6;</span>More details</a>
+        <a class="button main" href="/welcome/default/index"><span class="icon">&#x2B6E;</span>Try another photo</a>
+    </div>
+</div>
+
+<div id="full-info">
+<h1>Full report</h1>
+<table>
+    <tr>
+        <th>Model identified</th>
+        <td>{{=prediction}}</td>
+    </tr>
+    <tr>
+        <th>Accuracy</th>
+        <td>{{=probability}}%</td>
+    </tr>
+    <tr>
+        <th>Time elapsed</th>
+        <td>{{=time_elapsed}} seconds</td>
+    </tr>
+    <tr>
+        <th>Face</th>
+        <td><img src="data:image/png;base64,{{=image_face}}"></td>
+    </tr>
+    <tr>
+        <th>Original image</th>
+        <td><img src="data:image/png;base64,{{=orig_image}}"></td>
+    </tr>
+</table>
+</div>
+<script src="../static/app/result.js"></script>
